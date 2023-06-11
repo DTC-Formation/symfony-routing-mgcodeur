@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>Calculatrice</h2>
+    <form action="">
+        <input type="number" name="number_a">
+        <br><br>
+        <input type="text" name="operator">
+        <br><br>
+        <input type="number" name="number_b">
+        <br><br>
+        <input type="submit">
+    </form>
+    <br>
+    <div>
+        {% if result %}
+            Résultat: {{ result }}
+        {% endif %}
+    </div>
+{% endblock %}
