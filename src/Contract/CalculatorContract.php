@@ -8,7 +8,7 @@ interface CalculatorContract
      * @param int|float $number_a
      * @param string $operator
      * @param int|float $number_b
-     * @return string
+     * @return float|int|string
      */
-    public function calculate($number_a, $operator, $number_b): string;
+    public function calculate($number_a, $operator, $number_b): float|int|string;
 }
