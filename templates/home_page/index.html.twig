@@ -13,8 +13,15 @@
     </form>
     <br>
     <div>
-        {% if result %}
+        {% if result is defined %}
             Résultat: {{ result }}
+        {% elseif errors is defined %}
+            Erreurs: <br/>
+            <ul>
+                {% for error in errors %}
+                    <li>{{ error.message }}</li>
+                {% endfor %}
+            </ul>
         {% endif %}
-    </div>
+    </br>
 {% endblock %}
